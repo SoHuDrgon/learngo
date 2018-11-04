@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"sohudrgon.com/docker/learngo/retriever/mock"
-	"sohudrgon.com/docker/learngo/retriever/real"
+	"github.com/guogang1990/learngo/retriever/mock"
+	"github.com/guogang1990/learngo/retriever/real"
 	"time"
 )
 
