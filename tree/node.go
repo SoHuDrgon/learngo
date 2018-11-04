@@ -30,14 +30,14 @@ func (node *Node) SetValue(value int) {
 }
 
 //遍历函数
-func (node *Node) Traverse() {
-	if node == nil {
-		return
-	}
-	node.Left.Traverse()
-	node.Print()
-	node.Right.Traverse()
-}
+//func (node *Node) Traverse() {
+//	if node == nil {
+//		return
+//	}
+//	node.Left.Traverse()
+//	node.Print()
+//	node.Right.Traverse()
+//}
 func CreateNode(value int) *Node {
 	return &Node{Value: value} //局部变量也可以返回给别人用
 }
