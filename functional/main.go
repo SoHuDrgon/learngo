@@ -3,22 +3,10 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"github.com/guogang1990/learngo/functional/fib"
 	"io"
 	"strings"
 )
-
-//斐波那契数列实现
-//1 1 2 3 5 8 13 21
-//    a b
-//      a b
-//func fibnoacci() func() int{
-func fibnoacci() intGen {
-	a, b := 0, 1
-	return func() int {
-		a, b = b, a+b
-		return a
-	}
-}
 
 //定义接口
 //先定义类型
@@ -37,12 +25,12 @@ func (g intGen) Read(
 }
 func printFileContents(reader io.Reader) {
 	scanner := bufio.NewScanner(reader)
-	for scanner.Scan() {
+	for i := 0; i < 15 && scanner.Scan(); i++ {
 		fmt.Println(scanner.Text())
 	}
 }
 func main() {
-	f := fibnoacci()
+	var f intGen = fib.Fibnoacci()
 	//fmt.Println(f()) //1
 	//fmt.Println(f()) //1
 	//fmt.Println(f()) //2
